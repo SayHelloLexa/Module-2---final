@@ -10,40 +10,36 @@
 <body>
   
   <article class="article">
+    <div class="container container_header">
+      <h1 class="header-title">Отступы в вёрстке: margin и padding</h1>
 
-      <section class="article__section article__section_header-section">
-        <div class="container">
-        <h1 class="header-title">Отступы в вёрстке: margin и padding</h1>
+      <p class="paragraph">
+        В этой статье я рассмотрю самые популярные "стандартные" решения 
+        для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь 
+        пойдет об основных правилах организации отступов. Они сильно влияют на общую 
+        функциональность кода и, если всё сделано верно, позволяют легко вносить изменения 
+        в любую его часть. При этом другие части кода продолжат нормально работать.
+      </p>
+      
+      <p class="paragraph">
+        Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти 
+        за их пределы. Эти знания особенно важны для начинающих, но также будут полезным 
+        напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных 
+        основах работы с отступами в вёрстке.
+      </p>
+    </div>
 
-        <p class="paragraph">
-          В этой статье я рассмотрю самые популярные "стандартные" решения 
-          для сохранения смысла и хорошей читаемости вашего кода. Если точнее — речь 
-          пойдет об основных правилах организации отступов. Они сильно влияют на общую 
-          функциональность кода и, если всё сделано верно, позволяют легко вносить изменения 
-          в любую его часть. При этом другие части кода продолжат нормально работать.
-        </p>
-        
-        <p class="paragraph">
-          Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти 
-          за их пределы. Эти знания особенно важны для начинающих, но также будут полезным 
-          напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных 
-          основах работы с отступами в вёрстке.
-        </p>
-        </div>
-      </section>
-    
-  
-    <section class="content-list">
+    <nav class="nav">
       <div class="container container_gray">
         <h2 class="content-list__title">Содержание:</h2>
-
-        <ol class="ordered-list">
-          <li class="ordered-list__item"><a class="ordered-list__link" href="#first-section">Отступ задается от предыдущего элемента к следующему</a></li>
-          <li class="ordered-list__item"><a class="ordered-list__link" href="#second-section">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
-          <li class="ordered-list__item"><a class="ordered-list__link" href="#third-section">Для последнего элемента группы отступ обнуляется</a></li>
-        </ol>
+        
+          <ol class="ordered-list">
+            <li class="ordered-list__item"><a class="ordered-list__link" href="#first-section">Отступ задается от предыдущего элемента к следующему</a></li>
+            <li class="ordered-list__item"><a class="ordered-list__link" href="#second-section">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
+            <li class="ordered-list__item"><a class="ordered-list__link" href="#third-section">Для последнего элемента группы отступ обнуляется</a></li>
+          </ol>
       </div>
-    </section>
+    </nav>
     
     <section class="article__section article__section_first-section" id="first-section">
       <div class="container clearfix">
@@ -51,44 +47,48 @@
           Отступ задается от предыдущего элемента к следующему: 
           от первого ко второму, сверху вниз, слева направо.
         </h2>
+        
+        <div class="container__box clearfix">
+          <img class="img img_float_left" src="img/image 1.png" alt="пример использования margin по порядку">
 
-        <img class="img img_float_left" src="img/image 1.png" alt="пример использования margin по порядку">
+          <div class="text-container">
+            <p class="paragraph text-container__paragraph">
+              <strong>ВАЖНО:</strong> <i>margin</i> всегда задают от предыдущего элемента к следующему.
+            </p>
 
-        <div class="text-container">
-          <p class="paragraph text-container__paragraph">
-            <strong>ВАЖНО:</strong> <i>margin</i> всегда задают от предыдущего элемента к следующему.
-          </p>
+            <p class="paragraph text-container__paragraph">
+              Свойство <i>margin</i> необходимо только для того, чтобы отодвинуть своего соседа справа или 
+              снизу, поэтому используется <i>margin-right</i> и <i>margin-bottom</i>.
+            </p>
 
-          <p class="paragraph text-container__paragraph">
-            Свойство <i>margin</i> необходимо только для того, чтобы отодвинуть своего соседа справа или 
-            снизу, поэтому используется <i>margin-right</i> и <i>margin-bottom</i>.
-          </p>
+            <p class="paragraph text-container__paragraph">
+              (!) Свойства <i>margin-left</i> и <i>margin-top</i> используются крайне редко.
+            </p>
 
-          <p class="paragraph text-container__paragraph">
-            (!) Свойства <i>margin-left</i> и <i>margin-top</i> используются крайне редко.
-          </p>
-
-          <p class="paragraph text-container__paragraph">
-            Для <i>padding</i> верно обратное. Исключением является его применения в декоративных 
-            целях, например, для увеличения области ссылки.
-          </p>
+            <p class="paragraph text-container__paragraph">
+              Для <i>padding</i> верно обратное. Исключением является его применения в декоративных 
+              целях, например, для увеличения области ссылки.
+            </p>
+          </div>
         </div>
         
-        <img class="img img_float_right" src="img/image 2.png" alt="пример использования padding для отступов внутри">
+        <div class="container__box">
+          <img class="img img_float_right" src="img/image 2.png" alt="пример использования padding для отступов внутри">
 
-        <div class="text-container">
-          <p class="paragraph text-container__paragraph">
-            Отступ внутри блока сверху или слева реализуется через <i>padding-top</i> и <i>padding-left</i> родителя.
-          </p>
+          <div class="text-container">
+            <p class="paragraph text-container__paragraph">
+              Отступ внутри блока сверху или слева реализуется через <i>padding-top</i> и <i>padding-left</i> родителя.
+            </p>
 
-          <p class="paragraph text-container__paragraph">
-            Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать 
-            сам себя.
-          </p>
+            <p class="paragraph text-container__paragraph">
+              Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать 
+              сам себя.
+            </p>
 
-          <p class="paragraph text-container__paragraph">
-            Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.
-          </p>
+            <p class="paragraph text-container__paragraph">
+              Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.
+            </p>
+          </div>
         </div>
       </div>
     </section>

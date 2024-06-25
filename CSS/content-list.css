@@ -1,4 +1,4 @@
-.content-list {
+.nav {
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -17,9 +17,12 @@
 
 .ordered-list__item {
   margin-bottom: 10px;
-  text-decoration: underline #000;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;  
   color: #02535f;
+}
+
+.ordered-list__link {
+  border-bottom: 1px solid #000;
 }

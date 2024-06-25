@@ -97,14 +97,6 @@ iframe {
   padding-right: 30px;
 }
 
-.container_gray {
-  padding-left: 45px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 10px;
-  background-color: #F1F1F1;
-}
-
 .container__title {
   margin-bottom: 30px;
   font-weight: 900;
